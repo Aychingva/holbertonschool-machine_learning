@@ -8,7 +8,8 @@ def cofactor(matrix):
     """Calculates the cofactor matrix of a matrix
 
     Args:
-        matrix (list of lists): matrix whose cofactor matrix should be calculated
+        matrix (list of lists): matrix whose cofactor matrix
+            should be calculated
 
     Returns:
         list of lists: the cofactor matrix of matrix
