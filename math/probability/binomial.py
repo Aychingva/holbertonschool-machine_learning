@@ -40,3 +40,10 @@ class Binomial:
             nk_fact *= i
         combination = n_fact / (k_fact * nk_fact)
         return combination * self.p ** k * (1 - self.p) ** (self.n - k)
+
+    def cdf(self, k):
+        """Calculates the CDF value for a given k"""
+        k = int(k)
+        if k < 0 or k > self.n:
+            return 0
+        return sum(self.pmf(i) for i in range(k + 1))
