@@ -36,3 +36,13 @@ class Normal:
         coefficient = 1 / (self.stddev * (2 * self.pi) ** 0.5)
         exponent = -0.5 * ((x - self.mean) / self.stddev) ** 2
         return coefficient * self.e ** exponent
+
+    def erf(self, x):
+        """Approximates the error function"""
+        return (2 / self.pi ** 0.5) * (x - x ** 3 / 3 + x ** 5 / 10 -
+                                        x ** 7 / 42 + x ** 9 / 216)
+
+    def cdf(self, x):
+        """Calculates the CDF value for a given x-value"""
+        z = (x - self.mean) / (self.stddev * 2 ** 0.5)
+        return 0.5 * (1 + self.erf(z))
