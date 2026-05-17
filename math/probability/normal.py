@@ -39,8 +39,8 @@ class Normal:
 
     def erf(self, x):
         """Approximates the error function"""
-        return (2 / self.pi ** 0.5) * (x - x ** 3 / 3 + x ** 5 / 10
-                                        - x ** 7 / 42 + x ** 9 / 216)
+        term = x - x ** 3 / 3 + x ** 5 / 10 - x ** 7 / 42 + x ** 9 / 216
+        return (2 / self.pi ** 0.5) * term
 
     def cdf(self, x):
         """Calculates the CDF value for a given x-value"""
