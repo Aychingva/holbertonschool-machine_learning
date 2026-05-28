@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Module for converting last 10 rows of High and Close to numpy array."""
-import pandas as pd
 
 
 def array(df):
