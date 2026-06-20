@@ -25,6 +25,7 @@ def specificity(confusion):
 
     false_positives = predicted_positives - true_positives
     false_negatives = actual_positives - true_positives
-    true_negatives = total - (true_positives + false_positives + false_negatives)
+    true_sum = true_positives + false_positives + false_negatives
+    true_negatives = total - true_sum
 
     return true_negatives / (true_negatives + false_positives)
